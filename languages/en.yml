@@ -3,3 +3,7 @@ next: Newer Posts
 comment: Comments
 archive_a: Archives
 archive_b: "Archives: %s"
+tagcloud: Tags
+categories: Categories
+postedby: Posted by
+on: "on"

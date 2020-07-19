@@ -1,7 +1,9 @@
-prev: Antigos
-next: Novos
+prev: Anterior
+next: Próximo
 comment: Comentários
 archive_a: Arquivos
 archive_b: "Arquivados: %s"
 tagcloud: Tags
 categories: Categorias
+postedby: Postado por
+on: "em"

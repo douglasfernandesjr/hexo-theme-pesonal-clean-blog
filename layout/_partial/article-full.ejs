@@ -3,10 +3,15 @@
 <%
     var cover = item.cover || theme.index_cover;
 %>
-<header class="intro-header" style="background-image: url('<%- cover %>')">
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <a id="avatar" href="/" style="background-image: url('<%- theme.index_cover %>')"></a>
+                    <h2 class="site-title"><%- config.title %></h2>
+                    <span class="subheading"><%- config.subtitle %></span>
+                </div>
                 <div class="post-heading">
                     <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
                     <% if (item.subtitle && item.subtitle.length) { %>
@@ -17,7 +22,7 @@
                     <span class="meta">
                         <!-- Date and Author -->
                         <% if(item.author) { %>
-                            Posted by <%- item.author %> on
+                        <%-__('postedby') %> <%- item.author %>  <%-__('on') %> 
                         <% } %>
                         <% if(item.date) { %>
                             <%= item.date.format(config.date_format) %>

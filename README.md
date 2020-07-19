@@ -1,4 +1,4 @@
-# Clean Blog Hexo
+# Personal Clean Blog Hexo
 
 ![](http://www.codeblocq.com/img/hexo-theme-thumbnail/CleanBlog.png)
 
