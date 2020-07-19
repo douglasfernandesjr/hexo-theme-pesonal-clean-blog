@@ -35,6 +35,15 @@ addthis:
 
 # set your own favicon
 favicon:
+favicon_extra:
+  apple_touch_icon:
+  android_icon_32:
+  android_icon_16:
+  android_manifest:
+  mask_icon_href:
+  mask_icon_color:
+  msapplication_tilecolor:
+  theme_color:
 
 # Social Accounts
 twitter_url:
