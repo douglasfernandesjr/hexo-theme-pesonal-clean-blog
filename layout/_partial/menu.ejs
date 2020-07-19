@@ -11,7 +11,11 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="<%- config.root %>" title="<%-__('back_to_home') %> ">
-                <i class="fa fa-home" aria-hidden="true"></i>
+                <% if (theme.menu_icon) { %>
+                <img class="nav-icon"  src="<%= theme.menu_icon %>" /> <%- theme.menu_title || config.title || "" %>
+                <% } else { %>
+                <i class="fa fa-home" aria-hidden="true"></i> <%- theme.menu_title || config.title || "" %>
+                <% } %>
             </a>
         </div>
 

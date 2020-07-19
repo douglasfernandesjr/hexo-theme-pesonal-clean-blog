@@ -58,6 +58,14 @@ hr.small {
 
   .navbar-brand {
     font-weight: 800;
+    cursor: pointer;
+
+    .nav-icon {
+      height: 20px;
+      float: left;
+      padding-right: 5px;
+      cursor: pointer;
+    }
   }
 
   .nav {
@@ -145,7 +153,27 @@ hr.small {
 }
 
 .intro-header {
-  background-color: #fff;
+  &.intro-cover {
+    background-color: #fff;
+    background-color: gray;
+    background-position: center center;
+    background-attachment: scroll;
+    @extend .background-cover;
+
+    .site-heading {
+      padding: 60px 0 0;
+      color: #fff;
+    }
+
+    hr.small {
+          border-color: #fff;
+    }
+
+    .post-heading{
+        color: #fff;
+          padding-bottom: 60px;
+      }
+  }
 
   .site-heading {
     padding: 60px 0 0;

@@ -1,22 +1,19 @@
 <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 <%
-    var cover = item.cover || theme.index_cover;
+    var hasCover = !!item.cover;
+    var coverExtraStyle = hasCover? "background-image: url('"+item.cover+"');":"";
+    var coverClass = hasCover ? "intro-cover" : "";
 %>
-<header class="intro-header">
+<header class="intro-header <%= coverClass %>" style="<%= coverExtraStyle %>">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="site-heading">
-                    <a id="avatar" href="/" style="background-image: url('<%- theme.index_cover %>')"></a>
-                    <h2 class="site-title"><%- config.title %></h2>
                     <span class="subheading"><%- config.subtitle %></span>
+                    <hr class="small">
                 </div>
                 <div class="post-heading">
-                    <% if (item.cover) { %>
-                    <hr class="small">
-                    <img class="page-cover" src="<%- item.cover %>">
-                    <% } %>
                     <h1><%- item.title || theme.default_post_title || "Untitled" %></h1>
                     <% if (item.subtitle && item.subtitle.length) { %>
                     <h2 class="post-subheading">

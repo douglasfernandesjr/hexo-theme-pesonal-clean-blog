@@ -14,6 +14,9 @@ menu:
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: Configurable Title
 
+# Title on top left of menu. Leave empty to use home icon
+menu_icon:
+
 # URL of the Home page image
 index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
 
