@@ -1,20 +1,27 @@
 <div class="post-preview">
+    <!-- Tags and categories -->
+   
     <a href="<%- config.root %><%- item.path %>">
         <h2 class="post-title">
             <%- item.title || theme.default_post_title || "Untitled" %>
         </h2>
         <% if (item.subtitle && item.subtitle.length) { %>
-            <h3 class="post-subtitle">
-                <%- item.subtitle %>
-            </h3>
+        <h3 class="post-subtitle">
+            <%- item.subtitle %>
+        </h3>
         <% } %>
     </a>
     <p class="post-meta">
         <!-- Date and Author -->
         <% if(item.author) { %>
-            Posted by <%- item.author %> on
+        <%-__('postedby') %> <%- item.author %> <%-__('on') %>
         <% } %>
         <%= item.date.format(config.date_format) %>
     </p>
+    <% if ( item.tags && item.tags.length) { %>
+        <div class=" post-tags">
+            <%- partial('article-tags', {item: item}) %>
+        </div>
+        <% } %>
 </div>
 <hr>
