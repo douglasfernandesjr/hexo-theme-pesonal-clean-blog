@@ -1,12 +1,15 @@
 # Header
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
+  Tags: 
+     url: /tags
+     title: Tags
+  Categories:
+     url: /categories
+     title: Categories
   Github:
     url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
     icon: github
+    title: GitHub
 
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: Configurable Title

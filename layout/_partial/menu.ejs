@@ -10,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<%- config.root %>">
+            <a class="navbar-brand" href="<%- config.root %>" title="<%-__('back_to_home') %> ">
                 <i class="fa fa-home" aria-hidden="true"></i>
             </a>
         </div>
@@ -20,11 +20,12 @@
             <ul class="nav navbar-nav navbar-right">
                 <% for (var i in theme.menu){ %>
                 <li class="<%= !!theme.menu[i].icon ? "with-icon" :"" %>">
-                    <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>">
+                    <a href="<%- theme.menu[i].url ? url_for(theme.menu[i].url) : url_for(theme.menu[i]) %>"
+                        title="<%= !!theme.menu[i].title ? theme.menu[i].title : i %>">
                         <% if (theme.menu[i].icon) { %>
                         <i class="fa fa-<%= theme.menu[i].icon %> fa-stack-2x"></i>
                         <% } else { %>
-                        <%= i %>
+                        <%= theme.menu[i].title ? theme.menu[i].title : i %>
                         <% } %>
                     </a>
                 </li>
