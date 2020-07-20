@@ -2,9 +2,9 @@
 
 ![](http://www.codeblocq.com/img/hexo-theme-thumbnail/CleanBlog.png)
 
-Hexo implementation of [Clean Blog](http://blackrockdigital.github.io/startbootstrap-clean-blog/index.html)
+Personal Clean blog is a full featured, responsive Hexo theme. [Demo here](https://douglasfernandesjr.github.io).
 
-Clean blog is a full featured, responsive Hexo theme. [Demo here](http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/).
+This Theme is a Fork from [Clean Blog Hexo](https://github.com/klugjo/hexo-theme-clean-blog)
 
 ## Features
 
@@ -47,11 +47,13 @@ The menu is configured in the theme's `_config.yml`.
 ```
 # Header
 menu:
-  Home: /
-  Archives: /archives
-  Github:
-    url: https://github.com/klugjo/hexo-theme-clean-blog
+  - url: /tags
+    title: Tags
+  - url: /categories
+    title: Categories
+  - url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
     icon: github
+    title: GitHub
 ```
 
 The object key is the label and the value is the path, or you can use a icon (font awesome) like menu item.
@@ -63,6 +65,9 @@ The top left label is configured in the theme's `_config.yml`. When clicked it w
 ```
 # Title on top left of menu. Leave empty to use main blog title
 menu_title: Configurable Title
+
+# Title on top left of menu. Leave empty to use home icon
+menu_icon:
 ```
 
 ### Home Page cover image
@@ -146,18 +151,6 @@ author: Klug Jo
 ---
 ```
 
-### Post's Cover Image
-
-By default, posts will use the home page cover image. You can specify a custom cover in the front-matter:
-
-```
-title: Excerpts
-date: 2013-12-25 00:23:23
-tags: ["Excertps"]
-cover: /assets/contact-bg.jpg
----
-```
-
 ### Post's Share Cover Image
 
 You can specify a custom cover to share yours posts in social medias:
@@ -202,9 +195,13 @@ type: "tags"
 ```
 # Header
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
+  - url: /tags
+    title: Tags
+  - url: /categories
+    title: Categories
+  - url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
+    icon: github
+    title: GitHub
 ```
 
 ## Categories page.
@@ -229,9 +226,13 @@ type: "categories"
 ```
 # Header
 menu:
-  Home: /
-  Archives: /archives
-  Categories: /categories
+  - url: /tags
+    title: Tags
+  - url: /categories
+    title: Categories
+  - url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
+    icon: github
+    title: GitHub
 ```
 
 

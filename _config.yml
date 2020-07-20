@@ -1,13 +1,10 @@
 # Header
 menu:
-  Tags: 
-     url: /tags
-     title: Tags
-  Categories:
-     url: /categories
-     title: Categories
-  Github:
-    url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
+  - url: /tags
+    title: Tags
+  - url: /categories
+    title: Categories
+  - url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
     icon: github
     title: GitHub
 
@@ -18,7 +15,7 @@ menu_title: Configurable Title
 menu_icon:
 
 # URL of the Home page image
-index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
+index_cover: https://douglasfernandesjr.github.io/images/test/contact-bg.jpg
 
 # Default post title
 default_post_title: Untitled
