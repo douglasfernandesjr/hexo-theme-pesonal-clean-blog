@@ -26,7 +26,7 @@ This Theme is a Fork from [Clean Blog Hexo](https://github.com/klugjo/hexo-theme
 ## Installation
 
 ```
-$ git clone https://github.com/klugjo/hexo-theme-clean-blog.git themes/clean-blog
+$ git clone https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog.git themes/personal-clean-blog
 ```
 
 Then update your blog's main `_config.yml` to set the theme to `clean-blog`:
@@ -137,7 +137,7 @@ Setup the links to your social pages in the theme's `_config.yml`. Links are in 
 # Social Accounts
 twitter_url:
 facebook_url:
-github_url: https://github.com/klugjo/hexo-theme-clean-blog
+github_url: https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog
 linkedin_url:
 mailto:
 ```
