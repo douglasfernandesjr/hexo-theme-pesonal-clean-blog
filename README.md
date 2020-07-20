@@ -29,13 +29,13 @@ This Theme is a Fork from [Clean Blog Hexo](https://github.com/klugjo/hexo-theme
 $ git clone https://github.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog.git themes/personal-clean-blog
 ```
 
-Then update your blog's main `_config.yml` to set the theme to `clean-blog`:
+Then update your blog's main `_config.yml` to set the theme to `personal-clean-blog`:
 
 ```
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: clean-blog
+theme: personal-clean-blog
 ```
 
 ## Configuration
