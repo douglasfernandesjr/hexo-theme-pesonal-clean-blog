@@ -1,6 +1,6 @@
 # Personal Clean Blog Hexo
 
-![](http://www.codeblocq.com/img/hexo-theme-thumbnail/CleanBlog.png)
+![](https://raw.githubusercontent.com/douglasfernandesjr/hexo-theme-pesonal-clean-blog/master/source/img/ex.png)
 
 Personal Clean blog is a full featured, responsive Hexo theme. [Demo here](https://douglasfernandesjr.github.io).
 
