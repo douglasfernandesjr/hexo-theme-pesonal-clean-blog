@@ -14,39 +14,40 @@
 %>
 
 <% if (isTagIndex || isCategoryIndex || isPage) { %>
-    <header class="intro-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
-                        <a id="avatar" href="/" style="background-image: url('<%- theme.index_cover %>')"></a>
-                        <h2 class="site-title"><%- config.title %></h2>
-                        <span class="subheading"><%- config.subtitle %></span>
-                    </div>
-                    <div class="page-heading">
-                        <h1><%- page.title %></h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
+<header class="intro-header">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <% items.forEach(function(item){ %>
-                    <%- partial('_partial/tag-category-index', {item: item}) %>
-                <% }); %>
-                <div class="archive-before-pagination"></div>
+                <div class="site-heading">
+                    <a id="avatar" href="/" style="background-image: url('<%- theme.index_cover %>')"></a>
+                    <h2 class="site-title"><%- config.title %></h2>
+                    <span class="subheading"><%- config.subtitle %></span>
+                </div>
+                <div class="page-heading">
+                    <h1><%- page.title %></h1>
+                </div>
             </div>
         </div>
     </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <% if (isTagIndex || isCategoryIndex) { %>
+            <% items.forEach(function(item){ %>
+            <%- partial('_partial/tag-category-index', {item: item}) %>
+            <% }); %>
+            <div class="archive-before-pagination"></div>
+            <% } else { %>
+            <%- page.content %>
+            <% } %>
+        </div>
+    </div>
+</div>
 <% } else { %>
-    <section class="main">
-        <%- partial('_partial/article-full', {item: page}) %>
-    </section>
+<section class="main">
+    <%- partial('_partial/article-full', {item: page}) %>
+</section>
 <% } %>
-
-
-
