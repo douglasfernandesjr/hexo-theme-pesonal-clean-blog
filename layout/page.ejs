@@ -3,6 +3,7 @@
     var title = '';
     var isTagIndex = page.type === 'tags' || page.type === 'tag';
     var isCategoryIndex = page.type === 'categories' || page.type === 'category';
+    var isPage  = page.type === 'page';
     if (isTagIndex) {
         items = site.tags;
         title = __('tags');
@@ -12,7 +13,7 @@
     }
 %>
 
-<% if (isTagIndex || isCategoryIndex) { %>
+<% if (isTagIndex || isCategoryIndex || isPage) { %>
     <header class="intro-header">
         <div class="container">
             <div class="row">
