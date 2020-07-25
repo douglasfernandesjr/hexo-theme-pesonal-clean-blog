@@ -29,8 +29,8 @@
         description = page.description;
     } else if (config.description) {
         description = config.description;
-    } else if (page.excerpt) {
-        description = strip_html(page.excerpt).replace(/^\s*/, '').replace(/\s*$/, '');
+    } else if (page.subtitle) {
+        description = strip_html(page.subtitle).replace(/^\s*/, '').replace(/\s*$/, '');
     } else if (page.content) {
         description = strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
     }
@@ -107,7 +107,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <%- css('css/style.css') %>
+    <%- css('css/style.css?'+config.theme_version) %>
 
     <!-- Custom Fonts -->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
