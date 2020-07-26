@@ -8,7 +8,7 @@ This Theme is a Fork from [Clean Blog Hexo](https://github.com/klugjo/hexo-theme
 
 ## Features
 
-- Disqus and Facebook comments
+- Disqus, Facebook And Valine comments
 - Google Analytics
 - Addthis
 - Cover image for posts and pages
@@ -102,6 +102,15 @@ comments:
     appid: 123456789012345
     comment_count: 5
     comment_colorscheme: light
+  # Valine comments
+  valine:
+    enable: false
+    appId: 
+    appKey: 
+    visitor: true
+    avatar: 'retro' # Eight-pixel retro portrait : mm/identicon/monsterid/wavatar/retro/hide
+    pageSize: 10
+    placeholder: 'just go go' # Comment Box placeholder
 ```
 
 You can too hide the comment in the posts front-matter:
