@@ -3,8 +3,12 @@
 
 body {
   @extend .serif;
-  font-size: 20px;
+  font-size: 18px;
   color: gray-dark;
+
+   @media only screen and (min-width: 768px) {
+        font-size: 20px;
+    }
 }
 
 p {
@@ -188,9 +192,6 @@ hr.small {
   .post-heading, .page-heading {
     color: #404040;
 
-    @media only screen and (min-width: 768px) {
-    }
-
     &.archives {
       color: brand-primary;
       margin-top: 60px;
@@ -229,9 +230,6 @@ hr.small {
   }
 
   .post-heading, .page-heading {
-    h1 {
-      font-size: 50px;
-    }
 
     h2.post-subheading {
       font-weight: 600;
@@ -240,7 +238,7 @@ hr.small {
 
     @media only screen and (min-width: 768px) {
       h1 {
-        font-size: 55px;
+        font-size: 50px;
       }
     }
 
