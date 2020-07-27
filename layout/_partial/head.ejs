@@ -158,5 +158,9 @@
     <meta name="theme-color" content="<%- theme.favicon_extra.theme_color %>">
     <% } %>
 
+    <% if (page.comments && theme.comments && theme.comments.valine && theme.comments.valine.enable) { %>
+        <%- css('css/valine.css') %>
+    <% } %>
+   
 
 </head>
