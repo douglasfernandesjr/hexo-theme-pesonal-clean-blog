@@ -10,14 +10,62 @@
 <script src="<%- url_for('/libs/valine/av-min.min.js') %>"></script>
 <script src="<%- url_for('/libs/valine/Valine.min.js') %>"></script>
 <script>
-    new Valine({
+
+    var lang_default = '<%- theme.language == "zh-CN" %>' === "true";
+
+    var lang_var = lang_default ? 'zh-cn' : '<%-theme.language  %>';
+
+    var requiredFields = '<%= theme.comments.valine.requiredFields %>'.split(",");
+
+    langMode = {
+        "nick": "<%- __('valine.nick')%>",
+        "mail": "<%- __('valine.mail')%>",
+        "link": "<%- __('valine.link')%>",
+        "nickFail": "<%- __('valine.nickFail')%>",
+        "mailFail": "<%- __('valine.mailFail')%>",
+        "sofa": "<%- __('valine.sofa')%>",
+        "submit": "<%- __('valine.submit')%>",
+        "reply": "<%- __('valine.reply')%>",
+        "cancelReply": "<%- __('valine.cancelReply')%>",
+        "comments": "<%- __('valine.comments')%>",
+        "cancel": "<%- __('valine.cancel')%>",
+        "confirm": "<%- __('valine.confirm')%>",
+        "continue": "<%- __('valine.continue')%>",
+        "more": "<%- __('valine.more')%>",
+        "preview": "<%- __('valine.preview')%>",
+        "emoji": "<%- __('valine.emoji')%>",
+        "expand": "<%- __('valine.expand')%>",
+        "seconds": "<%- __('valine.seconds')%>",
+        "minutes": "<%- __('valine.minutes')%>",
+        "hours": "<%- __('valine.hours')%>",
+        "days": "<%- __('valine.days')%>",
+        "now": "<%- __('valine.now')%>",
+        "uploading": "<%- __('valine.uploading')%>",
+        "uploadDone": "<%- __('valine.uploadDone')%>",
+        "busy": "<%- __('valine.busy')%>",
+        "code-98": "<%- __('valine.code-98')%>",
+        "code-99": "<%- __('valine.code-99')%>",
+        "code-100": "<%- __('valine.code-100')%>",
+        "code-140": "<%- __('valine.code-140')%>",
+        "code-401": "<%- __('valine.code-401')%>",
+        "code-403": "<%- __('valine.code-403')%>"
+    };
+
+    var valineObj = {
         el: '#vcomments',
         appId: '<%- theme.comments.valine.appId %>',
         appKey: '<%- theme.comments.valine.appKey %>',
         visitor: '<%- theme.comments.valine.visitor %>' === 'true',
         avatar: '<%- theme.comments.valine.avatar %>',
         pageSize: '<%- theme.comments.valine.pageSize %>',
-        lang: '<% if (theme.language == "zh-CN") {  %>zh-cn<% } else { %>en<% } %>',
-        placeholder: '<%= theme.comments.valine.placeholder %>'
-    });
+        lang: lang_var,
+        placeholder: '<%= theme.comments.valine.placeholder %>',
+        requiredFields: requiredFields
+    };
+
+    if(!lang_default)
+    valineObj.langMode = langMode
+
+
+    new Valine(valineObj);
 </script>

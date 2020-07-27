@@ -1,5 +1,5 @@
 
-theme_version: "1.2.0.2"
+theme_version: "1.2.1.0"
 # Header
 menu:
   - url: /tags
@@ -40,6 +40,7 @@ comments:
     avatar: 'retro' # Eight-pixel retro portrait : mm/identicon/monsterid/wavatar/retro/hide
     pageSize: 10
     placeholder: 'just go go' # Comment Box placeholder
+    requiredFields: ['nick']
 
 # Google Analytics Tracking ID
 google_analytics:
