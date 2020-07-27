@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/valine.css">
 <div class="card valine-card">
     <div class="comment_headling">
         <i class="fa fa-comments fa-fw" aria-hidden="true"></i>
@@ -6,7 +7,7 @@
     <div id="vcomments" class="card-content">
     </div>
 </div>
-
+<script src="<%- url_for('/libs/valine/av-min.min.js') %>"></script>
 <script src="<%- url_for('/libs/valine/Valine.min.js') %>"></script>
 <script>
     new Valine({
